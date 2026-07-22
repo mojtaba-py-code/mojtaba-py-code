@@ -1,3 +1,4 @@
+![CI](https://github.com/mojtaba-py-code/Universal-E-commerce-Price-Intelligence/actions/workflows/ci.yml/badge.svg)
 # Hi there, I'm Mojtaba 👋
 
 ### Python Developer | Automation & Backend | Electrical Engineering Graduate
