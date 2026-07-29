@@ -30,6 +30,7 @@ I build **clean, production-grade Python systems** — from REST APIs and data p
 |---------|-------------|------------|
 | **[Unified API Integration Platform](https://github.com/mojtaba-py-code/Unified-API-Integration-Platform)** | Pluggable platform to integrate multiple external APIs behind one interface | CLI + REST API, CI, Docker |
 | **[E-commerce Price Intelligence](https://github.com/mojtaba-py-code/Universal-E-commerce-Price-Intelligence)** | Scrapes products, tracks price history & detects changes | Plugin scrapers, FastAPI dashboard, 23 tests |
+| **[Polite Web Crawler (web_scraping)](https://github.com/mojtaba-py-code/web_scraping)** | Security-conscious crawler & scraper that respects robots.txt and rate limits | SSRF guard, threat model, JSON Lines output |
 | **[Enterprise Data Processing Pipeline](https://github.com/mojtaba-py-code/Enterprise-Data-Processing-Pipeline)** | Config-driven, plugin-based ETL pipeline | pandas, modular stages |
 | **[Enterprise File Automation](https://github.com/mojtaba-py-code/Enterprise-File-Automation)** | Config-driven file processing & automation | Extensible pipeline, file watching |
 | **[SecureSync (vault_back)](https://github.com/mojtaba-py-code/vault_back)** | Encrypted backup CLI with chunking, deduplication & snapshots | Encryption, content-addressed store |
