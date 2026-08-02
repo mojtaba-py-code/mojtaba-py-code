@@ -43,14 +43,6 @@ I build **clean, production-grade Python systems** — from REST APIs and data p
 
 ---
 
-### 📊 GitHub Stats
-
-![Mojtaba's GitHub stats](https://github-readme-stats.vercel.app/api?username=mojtaba-py-code&show_icons=true&theme=tokyonight&hide_border=true)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=mojtaba-py-code&layout=compact&theme=tokyonight&hide_border=true)
-
----
-
 ### 📫 Let's connect
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mojtaba-karimi-python)
