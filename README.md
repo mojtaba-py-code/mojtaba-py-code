@@ -37,8 +37,11 @@ I build **clean, production-grade Python systems** — from REST APIs and data p
 | **[AI Job Market Intelligence](https://github.com/mojtaba-py-code/ai-job-market-intelligence)** | Ingests job postings, extracts skills with NLP, powers semantic search, resume matching & market analytics | FastAPI · 89 tests · Docker · CI |
 | **[Smart Travel Aggregator](https://github.com/mojtaba-py-code/smart-travel-aggregator)** | Production travel-aggregation API with resilient provider adapters, caching & metrics | Async SQLAlchemy · JWT/RBAC · Prometheus · 90%+ tests |
 | **[E-commerce Price Intelligence](https://github.com/mojtaba-py-code/universal-ecommerce-price-intelligence)** | Scrapes products and tracks price history over time | Plugin scrapers · FastAPI dashboard · **[Live demo](https://price-intelligence-demo.onrender.com)** |
-| **[Polite Web Crawler](https://github.com/mojtaba-py-code/web-scraping)** | Security-conscious crawler & scraper that respects robots.txt and rate limits | SSRF guard · threat model · JSON Lines |
+| **[Polite Web Crawler](https://github.com/mojtaba-py-code/polite-web-crawler)** | Security-conscious crawler & scraper that respects robots.txt and rate limits | SSRF guard · threat model · JSON Lines |
 | **[Unified API Integration Platform](https://github.com/mojtaba-py-code/unified-api-integration-platform)** | One CLI + REST interface over several external APIs via a plugin setup | Plugin architecture · CI · Docker |
+| **[DevOps Utility Collection](https://github.com/mojtaba-py-code/devops-utility-script-collection)** | Security-first Python CLI toolkit — backups, file sync, Docker, SSH, deployment & monitoring | Single CLI · security-audited · 160+ tests |
+| **[Enterprise Data Processing Pipeline](https://github.com/mojtaba-py-code/enterprise-data-processing-pipeline)** | Config-driven, plugin-based ETL for cleaning & transforming data | pandas · modular stages · CI |
+| **[Enterprise File Automation](https://github.com/mojtaba-py-code/enterprise-file-automation)** | Config-driven pipeline for processing files and repetitive file tasks | Extensible pipeline · file watching |
 | **[SecureSync Backup](https://github.com/mojtaba-py-code/vault-backup)** | Encrypted backup CLI with chunking, deduplication & snapshots | Encryption · content-addressed store |
 
 ---
