@@ -42,7 +42,7 @@ I build **clean, production-grade Python systems** — from REST APIs and data p
 | **[DevOps Utility Collection](https://github.com/mojtaba-py-code/devops-utility-script-collection)** | Security-first Python CLI toolkit — backups, file sync, Docker, SSH, deployment & monitoring | Single CLI · security-audited · 160+ tests |
 | **[Enterprise Data Processing Pipeline](https://github.com/mojtaba-py-code/enterprise-data-processing-pipeline)** | Config-driven, plugin-based ETL for cleaning & transforming data | pandas · modular stages · CI |
 | **[Enterprise File Automation](https://github.com/mojtaba-py-code/enterprise-file-automation)** | Config-driven pipeline for processing files and repetitive file tasks | Extensible pipeline · file watching |
-| **[SecureSync Backup](https://github.com/mojtaba-py-code/vault-backup)** | Encrypted backup CLI with chunking, deduplication & snapshots | Encryption · content-addressed store |
+| **[SecureSync](https://github.com/mojtaba-py-code/vault-backup)** | Encrypted backup CLI with chunking, deduplication & snapshots | Encryption · content-addressed store · cross-platform CI |
 
 ---
 
