@@ -34,6 +34,8 @@ I build **clean, production-grade Python systems** — from REST APIs and data p
 
 | Project | What it does | Highlights |
 |---------|-------------|------------|
+| **[Cyber Threat Intelligence Platform](https://github.com/mojtaba-py-code/cyber-threat-intelligence-platform)** | Self-hostable TIP: collects, enriches, scores and correlates IOCs, shares via STIX 2.1 / MISP, alerts over SSE | Offline-first · SSRF guard · 195 tests · mypy clean |
+| **[Big Data Log Analytics Platform](https://github.com/mojtaba-py-code/big-data-log-analytics-platform)** | Streaming log ingestion at constant memory, columnar Parquet/DuckDB storage, anomaly detection & security analytics | 592 tests · mypy --strict · benchmarks in CI |
 | **[AI Job Market Intelligence](https://github.com/mojtaba-py-code/ai-job-market-intelligence)** | Ingests job postings, extracts skills with NLP, powers semantic search, resume matching & market analytics | FastAPI · 89 tests · Docker · CI |
 | **[Smart Travel Aggregator](https://github.com/mojtaba-py-code/smart-travel-aggregator)** | Production travel-aggregation API with resilient provider adapters, caching & metrics | Async SQLAlchemy · JWT/RBAC · Prometheus · 90%+ tests |
 | **[E-commerce Price Intelligence](https://github.com/mojtaba-py-code/universal-ecommerce-price-intelligence)** | Scrapes products and tracks price history over time | Plugin scrapers · FastAPI dashboard · **[Live demo](https://price-intelligence-demo.onrender.com)** |
