@@ -1,56 +1,91 @@
-# Hi there, I'm Mojtaba 👋
+# Mojtaba Karimi
 
-### Python Developer | Automation & Backend | Electrical Engineering Graduate
+**Backend & Data Engineering in Python** — FastAPI · async SQLAlchemy · Postgres · Docker
 
-![Profile views](https://komarev.com/ghpvc/?username=mojtaba-py-code&label=Profile%20views&color=0e75b6&style=flat)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mojtaba-karimi-python)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:mojtaba.python@gmail.com)
+![Profile views](https://komarev.com/ghpvc/?username=mojtaba-py-code&label=Views&color=0e75b6&style=flat)
 
-I build **clean, production-grade Python systems** — from REST APIs and data pipelines to automation and web-scraping tools. I care about tested, well-structured code that works reliably, not just code that runs once.
+I build backend services and data pipelines in Python, and I ship them the way I'd want to
+inherit them: typed, tested, containerised, and wired to CI. Electrical engineering graduate,
+based in Ankara — available for remote and freelance work.
 
-- 🔭 Focused on **Backend Development, APIs & Data Engineering** (FastAPI, SQLAlchemy, Docker)
-- 🧩 I love **plugin-based, modular architectures** that are easy to extend and test
-- ⚙️ Background in **Electrical Engineering** → strong problem-solving mindset
-- 🌱 Currently deepening **NLP, semantic search, CI/CD and cloud deployment**
-- 📍 Based in Ankara, Türkiye — open to remote & freelance work
+Every repository below runs `ruff`, `mypy` and `pytest` on each push, plus `bandit` and
+`pip-audit` for security. The badges are live, so you can check any claim I make here.
 
 ---
 
-### 🛠️ Tech Stack
+## Featured work
+
+### 🛰️ [Cyber Threat Intelligence Platform](https://github.com/mojtaba-py-code/cyber-threat-intelligence-platform)
+
+A self-hostable TIP. Collects indicators from feeds, enriches and scores them, correlates them
+into campaigns, and shares the result over STIX 2.1 / MISP with a live SSE alert stream.
+
+Runs fully offline by default — every outbound request goes through an SSRF guard that resolves
+the host and rejects private, link-local and loopback ranges before the socket opens.
+
+`FastAPI` · `async SQLAlchemy` · `Celery` · `Alembic` · Docker Compose + nginx
+
+### 📊 [Big Data Log Analytics Platform](https://github.com/mojtaba-py-code/big-data-log-analytics-platform)
+
+Streaming log ingestion that holds memory flat regardless of input size, backed by a columnar
+Parquet/DuckDB store with partition pruning. Adds a safe query language, statistical anomaly
+detection and security analytics, served over REST, a dashboard and a CLI.
+
+Memory behaviour is measured by a benchmark harness that runs in CI, not asserted in prose.
+
+`DuckDB` · `Parquet` · `FastAPI` · `mypy --strict` · benchmarks in CI
+
+### 🧭 [Smart Travel Aggregator](https://github.com/mojtaba-py-code/smart-travel-aggregator)
+
+Travel search across several providers behind one API, with per-provider circuit breakers so a
+slow upstream degrades the response instead of taking the service down. JWT auth with RBAC,
+Redis-backed rate limiting and caching, and Prometheus RED metrics per route.
+
+[**Live demo →**](https://smart-travel-aggregator.onrender.com/docs) · free tier, first request takes ~40s to wake
+
+`Clean Architecture` · `async SQLAlchemy` · `Redis` · `Prometheus` · `Alembic`
+
+### 🛠️ [DevOps Utility Collection](https://github.com/mojtaba-py-code/devops-utility-script-collection)
+
+Fifteen operational tools — backups, file sync, Docker and SSH helpers, deployment, monitoring —
+behind a single CLI with one config format and one logging setup. Written security-first:
+archive extraction is path-traversal safe and every subprocess call is argument-list, never shell.
+
+`Python CLI` · `Bandit`-clean · `pip-audit` in CI
+
+---
+
+## Other projects
+
+[AI Job Market Intelligence](https://github.com/mojtaba-py-code/ai-job-market-intelligence) — NLP skill extraction and semantic job search ·
+[E-commerce Price Intelligence](https://github.com/mojtaba-py-code/universal-ecommerce-price-intelligence) — price-history tracking with a dashboard ·
+[Polite Web Crawler](https://github.com/mojtaba-py-code/polite-web-crawler) — robots.txt-respecting, SSRF-guarded scraper ·
+[Vault Backup](https://github.com/mojtaba-py-code/vault-backup) — encrypted backups with content-addressed deduplication ·
+[Unified API Integration Platform](https://github.com/mojtaba-py-code/unified-api-integration-platform) — plugin layer over several external APIs ·
+[Enterprise Data Pipeline](https://github.com/mojtaba-py-code/enterprise-data-processing-pipeline) — config-driven pandas ETL ·
+[File Automation](https://github.com/mojtaba-py-code/enterprise-file-automation) — watched-folder file processing
+
+---
+
+## Toolbox
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=flat&logo=sqlalchemy&logoColor=white)
-![pandas](https://img.shields.io/badge/pandas-150458?style=flat&logo=pandas&logoColor=white)
+![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?style=flat&logo=duckdb&logoColor=black)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white)
+![Celery](https://img.shields.io/badge/Celery-37814A?style=flat&logo=celery&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-150458?style=flat&logo=pandas&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
 ![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?style=flat&logo=pytest&logoColor=white)
+![Ruff](https://img.shields.io/badge/Ruff-D7FF64?style=flat&logo=ruff&logoColor=black)
+![mypy](https://img.shields.io/badge/mypy-2A6DB2?style=flat&logo=python&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat&logo=githubactions&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
 
 ---
 
-### 🚀 Featured Projects
-
-| Project | What it does | Highlights |
-|---------|-------------|------------|
-| **[Cyber Threat Intelligence Platform](https://github.com/mojtaba-py-code/cyber-threat-intelligence-platform)** | Self-hostable TIP: collects, enriches, scores and correlates IOCs, shares via STIX 2.1 / MISP, alerts over SSE | Offline-first · SSRF guard · 195 tests · mypy clean |
-| **[Big Data Log Analytics Platform](https://github.com/mojtaba-py-code/big-data-log-analytics-platform)** | Streaming log ingestion at constant memory, columnar Parquet/DuckDB storage, anomaly detection & security analytics | 592 tests · mypy --strict · benchmarks in CI |
-| **[AI Job Market Intelligence](https://github.com/mojtaba-py-code/ai-job-market-intelligence)** | Ingests job postings, extracts skills with NLP, powers semantic search, resume matching & market analytics | FastAPI · 89 tests · Docker · CI |
-| **[Smart Travel Aggregator](https://github.com/mojtaba-py-code/smart-travel-aggregator)** | Production travel-aggregation API with resilient provider adapters, caching & metrics | Async SQLAlchemy · JWT/RBAC · Prometheus · 90%+ tests |
-| **[E-commerce Price Intelligence](https://github.com/mojtaba-py-code/universal-ecommerce-price-intelligence)** | Scrapes products and tracks price history over time | Plugin scrapers · FastAPI dashboard · **[Live demo](https://price-intelligence-demo.onrender.com)** |
-| **[Polite Web Crawler](https://github.com/mojtaba-py-code/polite-web-crawler)** | Security-conscious crawler & scraper that respects robots.txt and rate limits | SSRF guard · threat model · JSON Lines |
-| **[Unified API Integration Platform](https://github.com/mojtaba-py-code/unified-api-integration-platform)** | One CLI + REST interface over several external APIs via a plugin setup | Plugin architecture · CI · Docker |
-| **[DevOps Utility Collection](https://github.com/mojtaba-py-code/devops-utility-script-collection)** | Security-first Python CLI toolkit — backups, file sync, Docker, SSH, deployment & monitoring | Single CLI · security-audited · 160+ tests |
-| **[Enterprise Data Processing Pipeline](https://github.com/mojtaba-py-code/enterprise-data-processing-pipeline)** | Config-driven, plugin-based ETL for cleaning & transforming data | pandas · modular stages · CI |
-| **[Enterprise File Automation](https://github.com/mojtaba-py-code/enterprise-file-automation)** | Config-driven pipeline for processing files and repetitive file tasks | Extensible pipeline · file watching |
-| **[SecureSync](https://github.com/mojtaba-py-code/vault-backup)** | Encrypted backup CLI with chunking, deduplication & snapshots | Encryption · content-addressed store · cross-platform CI |
-
----
-
-### 📫 Let's connect
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mojtaba-karimi-python)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:mojtaba.python@gmail.com)
-
-> 💬 Open to Python / Backend / Data opportunities, freelance and collaboration.
+Open to backend, API and data-engineering roles — remote, contract or freelance.
+Reach me on [LinkedIn](https://www.linkedin.com/in/mojtaba-karimi-python) or by [email](mailto:mojtaba.python@gmail.com).
