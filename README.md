@@ -11,7 +11,9 @@ inherit them: typed, tested, containerised, and wired to CI. Electrical engineer
 based in Ankara — available for remote and freelance work.
 
 Every repository below runs `ruff`, `mypy` and `pytest` on each push, plus `bandit` and
-`pip-audit` for security. The badges are live, so you can check any claim I make here.
+`pip-audit` for security. Each pipeline pins its GitHub Actions to full commit SHAs and
+asks for a read-only token. The badges are live and the workflow files are right there, so
+you can check any claim I make here — please do.
 
 ---
 
@@ -51,7 +53,8 @@ Redis-backed rate limiting and caching, and Prometheus RED metrics per route.
 
 Fifteen operational tools — backups, file sync, Docker and SSH helpers, deployment, monitoring —
 behind a single CLI with one config format and one logging setup. Written security-first:
-archive extraction is path-traversal safe and every subprocess call is argument-list, never shell.
+archive extraction refuses both traversal names and symlink members, and every subprocess call
+is an argument list against an allow-listed binary, never a shell.
 
 `Python CLI` · `Bandit`-clean · `pip-audit` in CI
 
@@ -60,7 +63,7 @@ archive extraction is path-traversal safe and every subprocess call is argument-
 ## Other projects
 
 [AI Job Market Intelligence](https://github.com/mojtaba-py-code/ai-job-market-intelligence) — NLP skill extraction and semantic job search ·
-[E-commerce Price Intelligence](https://github.com/mojtaba-py-code/universal-ecommerce-price-intelligence) — price-history tracking with a dashboard ·
+[E-commerce Price Intelligence](https://github.com/mojtaba-py-code/universal-ecommerce-price-intelligence) — price-history tracking with a dashboard, behind an SSRF guard ·
 [Polite Web Crawler](https://github.com/mojtaba-py-code/polite-web-crawler) — robots.txt-respecting, SSRF-guarded scraper ·
 [Vault Backup](https://github.com/mojtaba-py-code/vault-backup) — encrypted backups with content-addressed deduplication ·
 [Unified API Integration Platform](https://github.com/mojtaba-py-code/unified-api-integration-platform) — plugin layer over several external APIs ·
