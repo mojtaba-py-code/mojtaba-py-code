@@ -58,6 +58,18 @@ is an argument list against an allow-listed binary, never a shell.
 
 `Python CLI` · `Bandit`-clean · `pip-audit` in CI
 
+### 🧪 [Smart Data Quality Monitoring System](https://github.com/mojtaba-py-code/smart-data-quality-monitoring-system)
+
+Profiles a tabular dataset, validates it against a rule battery, cleans it, and condenses the
+result into a 0–100 quality score across five dimensions — then tracks schema and distribution
+drift between versions and reports it as HTML, PDF, or an interactive dashboard.
+
+The score is explainable rather than a black box: each dimension names the rules that moved it
+and the row positions that failed, so a bad number tells you what to fix. Every file it reads is
+treated as untrusted input.
+
+`Clean Architecture` · `pandas` · `Streamlit` · Docker · reports in HTML/PDF
+
 ---
 
 ## Other projects
