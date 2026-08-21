@@ -4,7 +4,6 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mojtaba-karimi-python)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:mojtaba.python@gmail.com)
-![Profile views](https://komarev.com/ghpvc/?username=mojtaba-py-code&label=Views&color=0e75b6&style=flat)
 
 I build backend services and data pipelines in Python, and I ship them the way I'd want to
 inherit them: typed, tested, containerised, and wired to CI. Electrical engineering graduate,
