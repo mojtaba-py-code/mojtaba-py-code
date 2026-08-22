@@ -38,8 +38,10 @@ Both run on a free instance, so the first request takes ~40s to wake it.
 Every repository below runs `ruff`, `mypy` and `pytest` on each push, plus `bandit` and
 `pip-audit` for security. Each pipeline pins its GitHub Actions to full commit SHAs and asks
 for a read-only token, and CodeQL, Dependabot and secret-scanning push protection are enabled
-across all 12 code repositories. The badges are live and the workflow files are right there, so
-you can check any claim I make here — please do.
+across all 12 code repositories. Together the suites run over 1,400 tests, and every project
+that names a coverage floor below fails its own build when coverage drops under it. The badges
+are live and the workflow files are right there, so you can check any claim I make here —
+please do.
 
 ---
 
@@ -59,7 +61,7 @@ you can check any claim I make here — please do.
 
 [**Live demo →**](https://price-intelligence-demo.onrender.com) · free tier, first request takes ~40s to wake
 
-48 tests · 80% coverage floor enforced in CI · `FastAPI` · `SQLAlchemy` · `PostgreSQL` · `Chart.js`
+80% coverage floor enforced in CI · `FastAPI` · `SQLAlchemy` · `PostgreSQL` · `Chart.js`
 
 ### 🕷️ [Polite Web Crawler](https://github.com/mojtaba-py-code/polite-web-crawler)
 
@@ -72,7 +74,7 @@ you can check any claim I make here — please do.
 - Handles what scrapers actually run into: oversized responses, redirect abuse, and credentials
   leaking into logs. Credentials come from the environment only and are redacted from output.
 
-36 tests · threat model written down in `SECURITY.md` · `Python CLI` · `JSONL` · `bandit`-clean
+80% coverage floor enforced in CI · threat model written down in `SECURITY.md` · `Python CLI` · `JSONL` · `bandit`-clean
 
 ### 🧭 [Smart Travel Aggregator](https://github.com/mojtaba-py-code/smart-travel-aggregator)
 
@@ -86,7 +88,7 @@ you can check any claim I make here — please do.
 
 [**Live demo →**](https://smart-travel-aggregator.onrender.com/docs) · free tier, first request takes ~40s to wake
 
-92 tests · 90% coverage floor enforced in CI · `async SQLAlchemy` · `Redis` · `Prometheus` · `Alembic`
+90% coverage floor enforced in CI · `async SQLAlchemy` · `Redis` · `Prometheus` · `Alembic`
 
 ### 🛰️ [Cyber Threat Intelligence Platform](https://github.com/mojtaba-py-code/cyber-threat-intelligence-platform)
 
@@ -97,7 +99,7 @@ you can check any claim I make here — please do.
 - Every outbound request goes through an SSRF guard that resolves the host and rejects private,
   link-local and loopback ranges before the socket opens.
 
-174 tests · `FastAPI` · `async SQLAlchemy` · `Celery` · `Alembic` · Docker Compose + nginx
+80% coverage floor enforced in CI · `FastAPI` · `async SQLAlchemy` · `Celery` · `Alembic` · Docker Compose + nginx
 
 ### 📊 [Big Data Log Analytics Platform](https://github.com/mojtaba-py-code/big-data-log-analytics-platform)
 
@@ -109,7 +111,7 @@ you can check any claim I make here — please do.
 - Statistical anomaly detection and security analytics on top of the same store.
 - Served three ways: REST API, dashboard and CLI.
 
-472 tests · 80% coverage floor enforced in CI · `DuckDB` · `Parquet` · `FastAPI` · `mypy --strict`
+80% coverage floor enforced in CI · `DuckDB` · `Parquet` · `FastAPI` · `mypy --strict`
 
 ### 🛠️ [DevOps Utility Collection](https://github.com/mojtaba-py-code/devops-utility-script-collection)
 
@@ -119,7 +121,7 @@ you can check any claim I make here — please do.
 - Archive extraction refuses both traversal names and symlink members.
 - Every subprocess call is an argument list against an allow-listed binary, never a shell.
 
-163 tests · `Python CLI` · `bandit`-clean · `pip-audit` in CI
+85% coverage floor enforced in CI · `Python CLI` · `bandit`-clean · `pip-audit` in CI
 
 ### 🧪 [Smart Data Quality Monitoring System](https://github.com/mojtaba-py-code/smart-data-quality-monitoring-system)
 
@@ -131,14 +133,14 @@ you can check any claim I make here — please do.
 - Tracks schema and distribution drift between versions of the same dataset.
 - Reports as HTML, PDF or an interactive dashboard; every file it reads is untrusted input.
 
-158 tests · `Clean Architecture` · `pandas` · `Streamlit` · Docker
+80% coverage floor enforced in CI · `Clean Architecture` · `pandas` · `Streamlit` · Docker
 
 ---
 
 ## Other projects
 
 - [AI Job Market Intelligence](https://github.com/mojtaba-py-code/ai-job-market-intelligence) —
-  NLP skill extraction and semantic job search · 169 tests
+  NLP skill extraction and semantic job search · 80% coverage floor enforced in CI
 - [Vault Backup](https://github.com/mojtaba-py-code/vault-backup) — encrypted backups with
   content-addressed deduplication
 - [Unified API Integration Platform](https://github.com/mojtaba-py-code/unified-api-integration-platform) —
