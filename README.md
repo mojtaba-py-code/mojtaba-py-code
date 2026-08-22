@@ -1,13 +1,30 @@
 # Mojtaba Karimi
 
-**Backend & Data Engineering in Python** — FastAPI · async SQLAlchemy · Postgres · Docker
+**Python backend, automation & data engineering** — FastAPI · async SQLAlchemy · Postgres · Docker
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mojtaba-karimi-python)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:mojtaba.python@gmail.com)
 
-I build backend services and data pipelines in Python, and I ship them the way I'd want to
-inherit them: typed, tested, containerised, and wired to CI. Electrical engineering graduate,
-based in Ankara — available for remote and freelance work.
+I build backend services, scrapers and data pipelines in Python, and I ship them the way I'd
+want to inherit them: typed, tested, containerised, and wired to CI. Electrical engineering
+graduate, based in Ankara, Türkiye (UTC+03:00), working remotely.
+
+**Available for freelance projects, and open to junior/mid backend roles.** My working day
+overlaps European business hours. Reach me by [email](mailto:mojtaba.python@gmail.com) or on
+[LinkedIn](https://www.linkedin.com/in/mojtaba-karimi-python).
+
+<!-- Freelance profiles: paste the public Fiverr / Upwork URLs here once they are live, e.g.
+     [Fiverr](URL) · [Upwork](URL) — leave this comment empty rather than linking a draft. -->
+
+### What I build for clients
+
+- **Web scraping & data extraction** — crawlers that respect `robots.txt` and rate limits and
+  hand back clean CSV, JSON or JSONL instead of half-parsed HTML.
+- **REST APIs** — FastAPI services with authentication, validation, database migrations and a
+  container image that runs the same on your machine and on the server.
+- **Automation & scheduled pipelines** — a manual weekly routine turned into a job that runs on
+  a schedule, keeps a history, and says so when it breaks.
+- **Dashboards & reporting** — the collected data charted, scored, and exported as HTML or PDF.
 
 Every repository below runs `ruff`, `mypy` and `pytest` on each push, plus `bandit` and
 `pip-audit` for security. Each pipeline pins its GitHub Actions to full commit SHAs and
