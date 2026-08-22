@@ -18,6 +18,37 @@ you can check any claim I make here — please do.
 
 ## Featured work
 
+### 🛒 [E-commerce Price Intelligence](https://github.com/mojtaba-py-code/universal-ecommerce-price-intelligence)
+
+A plugin-based price tracker: it scrapes product pages, keeps an append-only price history,
+detects every change, and charts the result in a FastAPI dashboard. Adding a store is one new
+file, with no change to the pipeline, the API or the database layer.
+
+Outbound fetches pass an SSRF guard, and a fixture scraper keeps the test suite offline and
+deterministic instead of dependent on a live shop.
+
+`FastAPI` · `SQLAlchemy` · `PostgreSQL` · `Chart.js`
+
+### 🕷️ [Polite Web Crawler](https://github.com/mojtaba-py-code/polite-web-crawler)
+
+Give it a seed URL and it crawls within that site, extracts structured data from each page and
+writes JSON Lines — respecting `robots.txt` and holding itself to one request per second per host.
+
+The SSRF guard resolves every URL and refuses private, loopback and link-local addresses, with no
+flag to switch it off. Credentials are read from the environment only and redacted from output.
+
+`Python CLI` · `JSONL` · `bandit`-clean
+
+### 🧭 [Smart Travel Aggregator](https://github.com/mojtaba-py-code/smart-travel-aggregator)
+
+Travel search across several providers behind one API, with per-provider circuit breakers so a
+slow upstream degrades the response instead of taking the service down. JWT auth with RBAC,
+Redis-backed rate limiting and caching, and Prometheus RED metrics per route.
+
+[**Live demo →**](https://smart-travel-aggregator.onrender.com/docs) · free tier, first request takes ~40s to wake
+
+`Clean Architecture` · `async SQLAlchemy` · `Redis` · `Prometheus` · `Alembic`
+
 ### 🛰️ [Cyber Threat Intelligence Platform](https://github.com/mojtaba-py-code/cyber-threat-intelligence-platform)
 
 A self-hostable TIP. Collects indicators from feeds, enriches and scores them, correlates them
@@ -37,16 +68,6 @@ detection and security analytics, served over REST, a dashboard and a CLI.
 Memory behaviour is measured by a benchmark harness that runs in CI, not asserted in prose.
 
 `DuckDB` · `Parquet` · `FastAPI` · `mypy --strict` · benchmarks in CI
-
-### 🧭 [Smart Travel Aggregator](https://github.com/mojtaba-py-code/smart-travel-aggregator)
-
-Travel search across several providers behind one API, with per-provider circuit breakers so a
-slow upstream degrades the response instead of taking the service down. JWT auth with RBAC,
-Redis-backed rate limiting and caching, and Prometheus RED metrics per route.
-
-[**Live demo →**](https://smart-travel-aggregator.onrender.com/docs) · free tier, first request takes ~40s to wake
-
-`Clean Architecture` · `async SQLAlchemy` · `Redis` · `Prometheus` · `Alembic`
 
 ### 🛠️ [DevOps Utility Collection](https://github.com/mojtaba-py-code/devops-utility-script-collection)
 
@@ -73,13 +94,16 @@ treated as untrusted input.
 
 ## Other projects
 
-[AI Job Market Intelligence](https://github.com/mojtaba-py-code/ai-job-market-intelligence) — NLP skill extraction and semantic job search ·
-[E-commerce Price Intelligence](https://github.com/mojtaba-py-code/universal-ecommerce-price-intelligence) — price-history tracking with a dashboard, behind an SSRF guard ·
-[Polite Web Crawler](https://github.com/mojtaba-py-code/polite-web-crawler) — robots.txt-respecting, SSRF-guarded scraper ·
-[Vault Backup](https://github.com/mojtaba-py-code/vault-backup) — encrypted backups with content-addressed deduplication ·
-[Unified API Integration Platform](https://github.com/mojtaba-py-code/unified-api-integration-platform) — plugin layer over several external APIs ·
-[Enterprise Data Pipeline](https://github.com/mojtaba-py-code/enterprise-data-processing-pipeline) — config-driven pandas ETL ·
-[File Automation](https://github.com/mojtaba-py-code/enterprise-file-automation) — watched-folder file processing
+- [AI Job Market Intelligence](https://github.com/mojtaba-py-code/ai-job-market-intelligence) —
+  NLP skill extraction and semantic job search
+- [Vault Backup](https://github.com/mojtaba-py-code/vault-backup) — encrypted backups with
+  content-addressed deduplication
+- [Unified API Integration Platform](https://github.com/mojtaba-py-code/unified-api-integration-platform) —
+  plugin layer over several external APIs
+- [Enterprise Data Pipeline](https://github.com/mojtaba-py-code/enterprise-data-processing-pipeline) —
+  config-driven pandas ETL
+- [File Automation](https://github.com/mojtaba-py-code/enterprise-file-automation) —
+  watched-folder file processing
 
 ---
 
