@@ -13,9 +13,6 @@ graduate, based in Ankara, Türkiye (UTC+03:00), working remotely.
 overlaps European business hours. Reach me by [email](mailto:mojtaba.python@gmail.com) or on
 [LinkedIn](https://www.linkedin.com/in/mojtaba-karimi-python).
 
-<!-- Freelance profiles: paste the public Fiverr / Upwork URLs here once they are live, e.g.
-     [Fiverr](URL) · [Upwork](URL) — leave this comment empty rather than linking a draft. -->
-
 ### What I build for clients
 
 - **Web scraping & data extraction** — crawlers that respect `robots.txt` and rate limits and
