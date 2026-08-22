@@ -46,84 +46,98 @@ you can check any claim I make here — please do.
 
 ### 🛒 [E-commerce Price Intelligence](https://github.com/mojtaba-py-code/universal-ecommerce-price-intelligence)
 
-A plugin-based price tracker: it scrapes product pages, keeps an append-only price history,
-detects every change, and charts the result in a FastAPI dashboard. Adding a store is one new
-file, with no change to the pipeline, the API or the database layer.
+**Tracks prices across stores over time and shows exactly when, and by how much, each one moved.**
 
-Outbound fetches pass an SSRF guard, and a fixture scraper keeps the test suite offline and
-deterministic instead of dependent on a live shop.
+- Plugin-per-store scraping: adding a shop is one new file, with no change to the pipeline, the
+  API or the database layer.
+- Append-only price history, so every product carries a full trend line, its lowest-ever price,
+  and a log of every detected change.
+- A FastAPI dashboard charts that history; the same data is available over the API.
+- Outbound fetches pass an SSRF guard, and a fixture scraper keeps the test suite offline and
+  deterministic instead of dependent on a live shop.
 
 [**Live demo →**](https://price-intelligence-demo.onrender.com) · free tier, first request takes ~40s to wake
 
-`FastAPI` · `SQLAlchemy` · `PostgreSQL` · `Chart.js`
+48 tests · 80% coverage floor enforced in CI · `FastAPI` · `SQLAlchemy` · `PostgreSQL` · `Chart.js`
 
 ### 🕷️ [Polite Web Crawler](https://github.com/mojtaba-py-code/polite-web-crawler)
 
-Give it a seed URL and it crawls within that site, extracts structured data from each page and
-writes JSON Lines — respecting `robots.txt` and holding itself to one request per second per host.
+**Turns a seed URL into a clean JSONL dataset without getting you blocked.**
 
-The SSRF guard resolves every URL and refuses private, loopback and link-local addresses, with no
-flag to switch it off. Credentials are read from the environment only and redacted from output.
+- Crawls within the seeded site, extracts structured data from each page, and writes JSON Lines.
+- Respects `robots.txt` and holds itself to one request per second per host.
+- The SSRF guard resolves every URL and refuses private, loopback and link-local addresses —
+  there is no flag to switch it off.
+- Handles what scrapers actually run into: oversized responses, redirect abuse, and credentials
+  leaking into logs. Credentials come from the environment only and are redacted from output.
 
-`Python CLI` · `JSONL` · `bandit`-clean
+36 tests · threat model written down in `SECURITY.md` · `Python CLI` · `JSONL` · `bandit`-clean
 
 ### 🧭 [Smart Travel Aggregator](https://github.com/mojtaba-py-code/smart-travel-aggregator)
 
-Travel search across several providers behind one API, with per-provider circuit breakers so a
-slow upstream degrades the response instead of taking the service down. JWT auth with RBAC,
-Redis-backed rate limiting and caching, and Prometheus RED metrics per route.
+**Travel search across several providers behind one API that degrades instead of falling over.**
+
+- Per-provider circuit breakers: a slow upstream costs you that provider's results, not the
+  whole response.
+- JWT authentication with role-based access, plus Redis-backed rate limiting and caching.
+- Prometheus RED metrics per route, so latency and error rate are visible per endpoint.
+- Clean Architecture layering with Alembic migrations.
 
 [**Live demo →**](https://smart-travel-aggregator.onrender.com/docs) · free tier, first request takes ~40s to wake
 
-`Clean Architecture` · `async SQLAlchemy` · `Redis` · `Prometheus` · `Alembic`
+92 tests · 90% coverage floor enforced in CI · `async SQLAlchemy` · `Redis` · `Prometheus` · `Alembic`
 
 ### 🛰️ [Cyber Threat Intelligence Platform](https://github.com/mojtaba-py-code/cyber-threat-intelligence-platform)
 
-A self-hostable TIP. Collects indicators from feeds, enriches and scores them, correlates them
-into campaigns, and shares the result over STIX 2.1 / MISP with a live SSE alert stream.
+**A self-hostable threat-intelligence platform that runs fully offline by default.**
 
-Runs fully offline by default — every outbound request goes through an SSRF guard that resolves
-the host and rejects private, link-local and loopback ranges before the socket opens.
+- Collects indicators from feeds, enriches and scores them, and correlates them into campaigns.
+- Shares the result over STIX 2.1 / MISP, with a live SSE alert stream for new detections.
+- Every outbound request goes through an SSRF guard that resolves the host and rejects private,
+  link-local and loopback ranges before the socket opens.
 
-`FastAPI` · `async SQLAlchemy` · `Celery` · `Alembic` · Docker Compose + nginx
+174 tests · `FastAPI` · `async SQLAlchemy` · `Celery` · `Alembic` · Docker Compose + nginx
 
 ### 📊 [Big Data Log Analytics Platform](https://github.com/mojtaba-py-code/big-data-log-analytics-platform)
 
-Streaming log ingestion that holds memory flat regardless of input size, backed by a columnar
-Parquet/DuckDB store with partition pruning. Adds a safe query language, statistical anomaly
-detection and security analytics, served over REST, a dashboard and a CLI.
+**Ingests log streams of any size on flat memory, then answers questions about them in seconds.**
 
-Memory behaviour is measured by a benchmark harness that runs in CI, not asserted in prose.
+- Streaming ingestion whose memory behaviour is measured by a benchmark harness that runs in CI,
+  not asserted in prose.
+- Columnar Parquet/DuckDB store with partition pruning behind a safe query language.
+- Statistical anomaly detection and security analytics on top of the same store.
+- Served three ways: REST API, dashboard and CLI.
 
-`DuckDB` · `Parquet` · `FastAPI` · `mypy --strict` · benchmarks in CI
+472 tests · 80% coverage floor enforced in CI · `DuckDB` · `Parquet` · `FastAPI` · `mypy --strict`
 
 ### 🛠️ [DevOps Utility Collection](https://github.com/mojtaba-py-code/devops-utility-script-collection)
 
-Fifteen operational tools — backups, file sync, Docker and SSH helpers, deployment, monitoring —
-behind a single CLI with one config format and one logging setup. Written security-first:
-archive extraction refuses both traversal names and symlink members, and every subprocess call
-is an argument list against an allow-listed binary, never a shell.
+**Fifteen operational tools behind a single CLI, one config format and one logging setup.**
 
-`Python CLI` · `Bandit`-clean · `pip-audit` in CI
+- Backups, file sync, Docker and SSH helpers, deployment and monitoring.
+- Archive extraction refuses both traversal names and symlink members.
+- Every subprocess call is an argument list against an allow-listed binary, never a shell.
+
+163 tests · `Python CLI` · `bandit`-clean · `pip-audit` in CI
 
 ### 🧪 [Smart Data Quality Monitoring System](https://github.com/mojtaba-py-code/smart-data-quality-monitoring-system)
 
-Profiles a tabular dataset, validates it against a rule battery, cleans it, and condenses the
-result into a 0–100 quality score across five dimensions — then tracks schema and distribution
-drift between versions and reports it as HTML, PDF, or an interactive dashboard.
+**Scores a dataset from 0 to 100 and names the rules and rows that moved the number.**
 
-The score is explainable rather than a black box: each dimension names the rules that moved it
-and the row positions that failed, so a bad number tells you what to fix. Every file it reads is
-treated as untrusted input.
+- Profiles a tabular dataset, validates it against a rule battery, and cleans it.
+- Scores it across five dimensions; each dimension names the rules that moved it and the row
+  positions that failed, so a bad number tells you what to fix.
+- Tracks schema and distribution drift between versions of the same dataset.
+- Reports as HTML, PDF or an interactive dashboard; every file it reads is untrusted input.
 
-`Clean Architecture` · `pandas` · `Streamlit` · Docker · reports in HTML/PDF
+158 tests · `Clean Architecture` · `pandas` · `Streamlit` · Docker
 
 ---
 
 ## Other projects
 
 - [AI Job Market Intelligence](https://github.com/mojtaba-py-code/ai-job-market-intelligence) —
-  NLP skill extraction and semantic job search
+  NLP skill extraction and semantic job search · 169 tests
 - [Vault Backup](https://github.com/mojtaba-py-code/vault-backup) — encrypted backups with
   content-addressed deduplication
 - [Unified API Integration Platform](https://github.com/mojtaba-py-code/unified-api-integration-platform) —
