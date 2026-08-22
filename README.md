@@ -26,6 +26,15 @@ overlaps European business hours. Reach me by [email](mailto:mojtaba.python@gmai
   a schedule, keeps a history, and says so when it breaks.
 - **Dashboards & reporting** — the collected data charted, scored, and exported as HTML or PDF.
 
+### Two demos you can open right now
+
+- **[Price tracker](https://price-intelligence-demo.onrender.com)** — scrapes products, keeps the
+  full price history, charts it and flags every change.
+- **[Travel search API](https://smart-travel-aggregator.onrender.com/docs)** — several providers
+  behind one API, browsable from the interactive OpenAPI page.
+
+Both run on a free instance, so the first request takes ~40s to wake it.
+
 Every repository below runs `ruff`, `mypy` and `pytest` on each push, plus `bandit` and
 `pip-audit` for security. Each pipeline pins its GitHub Actions to full commit SHAs and
 asks for a read-only token. The badges are live and the workflow files are right there, so
@@ -43,6 +52,8 @@ file, with no change to the pipeline, the API or the database layer.
 
 Outbound fetches pass an SSRF guard, and a fixture scraper keeps the test suite offline and
 deterministic instead of dependent on a live shop.
+
+[**Live demo →**](https://price-intelligence-demo.onrender.com) · free tier, first request takes ~40s to wake
 
 `FastAPI` · `SQLAlchemy` · `PostgreSQL` · `Chart.js`
 
