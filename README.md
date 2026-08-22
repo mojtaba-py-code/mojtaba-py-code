@@ -36,8 +36,9 @@ overlaps European business hours. Reach me by [email](mailto:mojtaba.python@gmai
 Both run on a free instance, so the first request takes ~40s to wake it.
 
 Every repository below runs `ruff`, `mypy` and `pytest` on each push, plus `bandit` and
-`pip-audit` for security. Each pipeline pins its GitHub Actions to full commit SHAs and
-asks for a read-only token. The badges are live and the workflow files are right there, so
+`pip-audit` for security. Each pipeline pins its GitHub Actions to full commit SHAs and asks
+for a read-only token, and CodeQL, Dependabot and secret-scanning push protection are enabled
+across all 12 code repositories. The badges are live and the workflow files are right there, so
 you can check any claim I make here — please do.
 
 ---
