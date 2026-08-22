@@ -1,0 +1,84 @@
+# This README is the profile page, so a dead link here is the first thing a
+# visitor sees. The check is a plain curl loop rather than a link-checker
+# action: it needs no dependency, and every action used in these repositories is
+# pinned to a full commit SHA, which a marketplace checker would only complicate.
+#
+# It fails on 404/410 and on hosts that do not answer at all — the two states
+# that mean "this link is broken". Anything else (403, 405, 429, LinkedIn's 999)
+# is reported as a warning: those are hosts refusing an automated request, not
+# rotten links, and failing on them would make the badge lie in the other
+# direction.
+name: Links
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "README.md"
+      - ".github/workflows/links.yml"
+  pull_request:
+    paths:
+      - "README.md"
+      - ".github/workflows/links.yml"
+  # Link rot happens while the repository sits still, so also check weekly.
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: links-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  readme:
+    name: README links still resolve
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Every link in the README answers
+        run: |
+          set -uo pipefail
+
+          # `|| true`: grep exits 1 on no match, which would abort the step
+          # before the friendlier message below gets a chance to run.
+          urls=$(grep -oE 'https?://[^][)"'"'"' <>]+' README.md | sed 's/[.,;:]*$//' | sort -u || true)
+          if [ -z "$urls" ]; then
+            echo "No links found in README.md — nothing to check."
+            exit 0
+          fi
+
+          failed=0
+          while IFS= read -r url; do
+            # The two demos run on a free instance that sleeps, so the first
+            # request can take ~40s to wake it; hence the generous timeout.
+            code=$(curl --silent --location --output /dev/null \
+                        --write-out '%{http_code}' \
+                        --connect-timeout 15 --max-time 90 \
+                        --retry 2 --retry-delay 5 \
+                        --user-agent 'readme-link-check (+https://github.com/mojtaba-py-code)' \
+                        "$url") || code=000
+
+            case "$code" in
+              2??|3??)
+                echo "ok    $code  $url"
+                ;;
+              404|410)
+                echo "DEAD  $code  $url"
+                failed=1
+                ;;
+              000)
+                echo "DEAD  no response  $url"
+                failed=1
+                ;;
+              *)
+                echo "warn  $code  $url  (host refused an automated request; check by hand)"
+                ;;
+            esac
+          done <<< "$urls"
+
+          exit "$failed"
