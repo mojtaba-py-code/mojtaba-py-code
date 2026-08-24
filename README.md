@@ -35,7 +35,7 @@ Both run on a free instance, so the first request takes ~40s to wake it.
 Every repository below runs `ruff`, `mypy` and `pytest` on each push, plus `bandit` and
 `pip-audit` for security. Each pipeline pins its GitHub Actions to full commit SHAs and asks
 for a read-only token, and CodeQL, Dependabot and secret-scanning push protection are enabled
-across all 12 code repositories. Together the suites run over 1,400 tests, and every project
+across all 11 actively maintained repositories. Together the suites run over 1,400 tests, and every project
 that names a coverage floor below fails its own build when coverage drops under it. The badges
 are live and the workflow files are right there, so you can check any claim I make here —
 please do.
@@ -140,10 +140,6 @@ please do.
   NLP skill extraction and semantic job search · 80% coverage floor enforced in CI
 - [Vault Backup](https://github.com/mojtaba-py-code/vault-backup) — encrypted backups with
   content-addressed deduplication
-- [Unified API Integration Platform](https://github.com/mojtaba-py-code/unified-api-integration-platform) —
-  plugin layer over several external APIs
-- [Enterprise Data Pipeline](https://github.com/mojtaba-py-code/enterprise-data-processing-pipeline) —
-  config-driven pandas ETL
 - [File Automation](https://github.com/mojtaba-py-code/enterprise-file-automation) —
   watched-folder file processing
 
