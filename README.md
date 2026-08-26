@@ -137,11 +137,21 @@ please do.
 ## Other projects
 
 - [AI Job Market Intelligence](https://github.com/mojtaba-py-code/ai-job-market-intelligence) —
-  NLP skill extraction and semantic job search · 80% coverage floor enforced in CI
+  NLP skill extraction and semantic job search · 85% coverage floor enforced in CI
 - [Vault Backup](https://github.com/mojtaba-py-code/vault-backup) — encrypted backups with
-  content-addressed deduplication
+  content-addressed deduplication · 80% coverage floor enforced in CI
 - [File Automation](https://github.com/mojtaba-py-code/enterprise-file-automation) —
-  watched-folder file processing
+  watched-folder file processing · 85% coverage floor enforced in CI
+
+---
+
+## Upstream
+
+- [litestar-org/litestar#5017](https://github.com/litestar-org/litestar/pull/5017) — merged:
+  corrected duplicated words in two error messages.
+- [pypa/pip-audit#1111](https://github.com/pypa/pip-audit/pull/1111) — proposed validating
+  `--output` before running the audit, so a scan does not complete only to fail on an
+  unwritable path. Not merged.
 
 ---
 
