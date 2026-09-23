@@ -35,7 +35,7 @@ Both run on a free instance, so the first request takes ~40s to wake it.
 Every repository below runs `ruff`, `mypy` and `pytest` on each push, plus `bandit` and
 `pip-audit` for security. Each pipeline pins its GitHub Actions to full commit SHAs and asks
 for a read-only token, and CodeQL, Dependabot and secret-scanning push protection are enabled
-across all 12 actively maintained repositories. Together the suites run over 1,400 tests, and every project
+across all 17 actively maintained repositories. Together the suites run over 1,400 tests, and every project
 that names a coverage floor below fails its own build when coverage drops under it. The badges
 are live and the workflow files are right there, so you can check any claim I make here —
 please do.
@@ -43,6 +43,22 @@ please do.
 ---
 
 ## Featured work
+
+### ⚙️ [IronFlow — Enterprise ETL Platform](https://github.com/mojtaba-py-code/ironflow)
+
+**Declare a pipeline in YAML; it runs as a dependency graph, streams in bounded memory, and
+either lands completely or not at all.**
+
+- Extraction, validation, transformation and loading each stream, so a dataset larger than
+  memory is a normal case rather than the one that kills the run.
+- Loads are transactional and rows that fail validation are quarantined, so a bad batch never
+  leaves the destination half-written with no record of what was dropped.
+- Expressions evaluate in an AST sandbox, and path, SQL and SSRF guards sit on every boundary
+  where a pipeline file could otherwise reach the host.
+- Every run appends to a hash-chained audit trail, so an altered history does not verify.
+- Driven from a CLI, a REST API, or the Docker image.
+
+1015 tests · 88% branch-coverage floor enforced in CI · `Python` · `SQLAlchemy` · `Pydantic` · `FastAPI` · Docker
 
 ### 🛒 [E-commerce Price Intelligence](https://github.com/mojtaba-py-code/universal-ecommerce-price-intelligence)
 
