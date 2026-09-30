@@ -35,7 +35,7 @@ Both run on a free instance, so the first request takes ~40s to wake it.
 Every repository below runs `ruff`, `mypy` and `pytest` on each push, plus `bandit` and
 `pip-audit` for security. Each pipeline pins its GitHub Actions to full commit SHAs and asks
 for a read-only token, and CodeQL, Dependabot and secret-scanning push protection are enabled
-across all 17 actively maintained repositories. Together the suites run over 1,400 tests, and every project
+across all 22 actively maintained repositories. Together the suites run over 6,000 tests, and every project
 that names a coverage floor below fails its own build when coverage drops under it. The badges
 are live and the workflow files are right there, so you can check any claim I make here —
 please do.
@@ -43,6 +43,22 @@ please do.
 ---
 
 ## Featured work
+
+### 🤖 [NexusFlow AI — Automation & Competitive-Intelligence Platform](https://github.com/mojtaba-py-code/fastapi-postgres-ai-automation-platform)
+
+**Collects business data from websites, APIs, signed webhooks and spreadsheet uploads, keeps its full
+history, and tells the right people when something meaningful changes.**
+
+- Multi-tenant by design: PostgreSQL row-level security, forced on a role that cannot bypass it, plus
+  an explicit tenant filter in every query.
+- Hostile content - web pages and uploaded files - is parsed only in a sandbox worker that has no
+  database, no storage and no secrets.
+- n8n schedules and orchestrates; Python workers on Celery/RabbitMQ execute. Every step is authorized,
+  idempotent and recorded in a hash-chained audit log.
+- AI analysis is opt-in per tenant and never sees data classified as restricted.
+- Sign-in with passkeys, TOTP or OIDC single sign-on, with SCIM provisioning.
+
+2,560 tests · 80% coverage floor enforced in CI · `FastAPI` · `PostgreSQL` · `Celery` · `RabbitMQ` · `n8n` · Docker
 
 ### ⚙️ [IronFlow — Enterprise ETL Platform](https://github.com/mojtaba-py-code/ironflow)
 
@@ -58,7 +74,7 @@ either lands completely or not at all.**
 - Every run appends to a hash-chained audit trail, so an altered history does not verify.
 - Driven from a CLI, a REST API, or the Docker image.
 
-1015 tests · 88% branch-coverage floor enforced in CI · `Python` · `SQLAlchemy` · `Pydantic` · `FastAPI` · Docker
+1443 tests · 89% branch-coverage floor enforced in CI · `Python` · `SQLAlchemy` · `Pydantic` · `FastAPI` · Docker
 
 ### 🛒 [E-commerce Price Intelligence](https://github.com/mojtaba-py-code/universal-ecommerce-price-intelligence)
 
@@ -156,6 +172,11 @@ either lands completely or not at all.**
   NLP skill extraction and semantic job search · 85% coverage floor enforced in CI
 - [Vault Backup](https://github.com/mojtaba-py-code/vault-backup) — encrypted backups with
   content-addressed deduplication · 80% coverage floor enforced in CI
+- [Website Monitoring](https://github.com/mojtaba-py-code/website-monitoring-automation) —
+  async website, API, SSL and DNS monitoring · published on
+  [PyPI](https://pypi.org/project/website-monitoring-automation/)
+- [Payment Gateway Integration](https://github.com/mojtaba-py-code/universal-payment-gateway-integration) —
+  provider-agnostic payments with idempotency and signed webhooks · 90% coverage floor enforced in CI
 - [File Automation](https://github.com/mojtaba-py-code/enterprise-file-automation) —
   watched-folder file processing · 85% coverage floor enforced in CI
 

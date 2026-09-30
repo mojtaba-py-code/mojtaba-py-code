@@ -22,7 +22,7 @@ on:
       - ".github/workflows/links.yml"
   # Link rot happens while the repository sits still, so also check weekly.
   schedule:
-    - cron: "0 6 * * 1"
+    - cron: "41 6 * * 1"
   workflow_dispatch:
 
 permissions:
