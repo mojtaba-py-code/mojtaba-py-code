@@ -4,7 +4,7 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mojtaba-karimi-python)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:mojtaba.python@gmail.com)
-
+[![Contra](https://img.shields.io/badge/Hire%20me%20on-Contra-000000?style=flat)](https://contra.com/mojtaba_py_code)
 I build LLM-powered backends, RAG systems, APIs and data pipelines in Python, and I ship them the way I'd
 want to inherit them: typed, tested, containerised, and wired to CI. Electrical engineering
 graduate, based in Ankara, Türkiye (UTC+03:00), working remotely.
