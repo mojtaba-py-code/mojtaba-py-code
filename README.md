@@ -71,7 +71,7 @@ against its sources, and keeps watching those sources for change.**
 
 - Tenants are isolated by PostgreSQL row-level security, not only by application code.
 - Outbound requests go through SSRF-safe egress, and each AI agent works within explicit permissions.
-- Evidence and claims are stored with their sources, so every answer can be traced back.
+- The result is a cited report: every finding must rest on a verified quote from its source.
 
 946 tests · 85% coverage floor enforced in CI · `Claude` · `FastAPI` · `PostgreSQL` · `pgvector` · Docker
 
@@ -82,8 +82,10 @@ against its sources, and keeps watching those sources for change.**
 **Answers customers on WhatsApp from the business's own documents, books appointments and hands the
 conversation to a person when needed.**
 
-- Built on the official WhatsApp Cloud API with a FastAPI webhook.
-- Replies are grounded in the business's documents; bookings and hand-offs are handled by tested code.
+- Appointments go through a guided step-by-step flow. On a hand-off the owner gets a WhatsApp alert,
+  and the bot stays silent for that customer.
+- Built on the official WhatsApp Cloud API: webhook retries are ignored, and each customer's messages
+  are handled one at a time.
 
 245 tests · 98% line and branch coverage · `Claude` · `FastAPI` · `WhatsApp Cloud API`
 
