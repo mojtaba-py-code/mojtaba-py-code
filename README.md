@@ -39,7 +39,7 @@ Both run on a free instance, so the first request takes ~40s to wake it.
 Every repository below runs `ruff`, `mypy` and `pytest` on each push, plus `bandit` and
 `pip-audit` for security. Each pipeline pins its GitHub Actions to full commit SHAs and asks
 for a read-only token, and CodeQL, Dependabot and secret-scanning push protection are enabled
-across all 24 actively maintained repositories. Together the suites run over 6,000 tests, and every project
+across every actively maintained repository. Together the suites run over 6,000 tests, and every project
 that names a coverage floor below fails its own build when coverage drops under it. The badges
 are live and the workflow files are right there, so you can check any claim I make here —
 please do.
@@ -63,6 +63,33 @@ and tickets, and hands over to a human agent when the situation calls for one.**
   carry SLSA provenance.
 
 484 tests · 85% coverage floor enforced in CI · `Claude` · `FastAPI` · `PostgreSQL` · `Qdrant` · `Redis` · Docker
+
+### 🔎 [Argus — Multi-Tenant AI Research Platform](https://github.com/mojtaba-py-code/argus-intelligence-platform)
+
+**Plans a research task, gathers evidence from the web and from documents, checks every claim
+against its sources, and keeps watching those sources for change.**
+
+- Tenants are isolated by PostgreSQL row-level security, not only by application code.
+- Outbound requests go through SSRF-safe egress, and each AI agent works within explicit permissions.
+- The result is a cited report: every finding must rest on a verified quote from its source.
+
+946 tests · 85% coverage floor enforced in CI · `Claude` · `FastAPI` · `PostgreSQL` · `pgvector` · Docker
+
+---
+
+### 💬 [WhatsApp AI Assistant for Small Businesses](https://github.com/mojtaba-py-code/whatsapp-ai-assistant)
+
+**Answers customers on WhatsApp from the business's own documents, books appointments and hands the
+conversation to a person when needed.**
+
+- Appointments go through a guided step-by-step flow. On a hand-off the owner gets a WhatsApp alert,
+  and the bot stays silent for that customer.
+- Built on the official WhatsApp Cloud API: webhook retries are ignored, and each customer's messages
+  are handled one at a time.
+
+245 tests · 98% line and branch coverage · `Claude` · `FastAPI` · `WhatsApp Cloud API`
+
+---
 
 ### 📄 [AI Document Assistant — Secure Multi-Tenant RAG](https://github.com/mojtaba-py-code/ai-document-assistant)
 
@@ -212,6 +239,20 @@ either lands completely or not at all.**
   provider-agnostic payments with idempotency and signed webhooks · 90% coverage floor enforced in CI
 - [File Automation](https://github.com/mojtaba-py-code/enterprise-file-automation) —
   watched-folder file processing · 85% coverage floor enforced in CI
+- [Enterprise Automation Platform](https://github.com/mojtaba-py-code/enterprise-automation-platform) —
+  plugin-driven business workflows with scheduling, a REST API and a CLI · 90% coverage floor enforced in CI
+- [News Intelligence Platform](https://github.com/mojtaba-py-code/news-intelligence-platform) —
+  multi-source news ingestion with NLP enrichment and analytics
+- [Real-Time Job Market Intelligence](https://github.com/mojtaba-py-code/real-time-job-market-intelligence) —
+  ingestion, NLP, analytics and an API for public job-market data
+- [Crypto Trading Hub](https://github.com/mojtaba-py-code/multi-platform-crypto-trading-hub) —
+  security-first FastAPI hub for 9 exchanges; paper trading by default, live routing off unless enabled
+- [System Health Monitor](https://github.com/mojtaba-py-code/system-health-monitor) —
+  cross-platform metrics, threshold alerts and reports · 83 tests, 90% coverage
+- [System Maintenance Automation](https://github.com/mojtaba-py-code/system-maintenance-automation) —
+  quarantine-backed cleanup, verified incremental backups and health scoring · 244 tests
+- [Advanced File Management Toolkit](https://github.com/mojtaba-py-code/advanced-file-management-toolkit) —
+  organize, deduplicate, sync and back up files · 160 tests, 85% coverage floor enforced in CI
 
 ---
 
