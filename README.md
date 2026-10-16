@@ -10,7 +10,7 @@ I build LLM-powered backends, RAG systems, APIs and data pipelines in Python, an
 want to inherit them: typed, tested, containerised, and wired to CI. Electrical engineering
 graduate, based in Ankara, Türkiye (UTC+03:00), working remotely.
 
-**Available for freelance projects, and open to junior/mid backend roles.** My working day
+**Available for freelance projects.** My working day
 overlaps European business hours. Reach me by [email](mailto:mojtaba.python@gmail.com) or on
 [LinkedIn](https://www.linkedin.com/in/mojtaba-karimi-python).
 
