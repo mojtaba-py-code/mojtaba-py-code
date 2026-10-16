@@ -6,6 +6,7 @@
 [![Email](https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:mojtaba.python@gmail.com)
 [![Contra](https://img.shields.io/badge/Hire%20me%20on-Contra-000000?style=flat)](https://contra.com/mojtaba_py_code)
 [![Freelancer](https://img.shields.io/badge/Hire%20me%20on-Freelancer-29B2FE?style=flat)](https://www.freelancer.com/hireme/mojtaba2025py)
+[![Fiverr](https://img.shields.io/badge/Hire%20me%20on-Fiverr-1DBF73?style=flat&logo=fiverr&logoColor=white)](https://www.fiverr.com/mojtaba2025py)
 
 I build LLM-powered backends, RAG systems, APIs and data pipelines in Python, and I ship them the way I'd
 want to inherit them: typed, tested, containerised, and wired to CI. Electrical engineering
