@@ -4,6 +4,7 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mojtaba-karimi-python)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:mojtaba.python@gmail.com)
+[![Upwork](https://img.shields.io/badge/Hire%20me%20on-Upwork-14A800?style=flat&logo=upwork&logoColor=white)](https://www.upwork.com/freelancers/~014e7900b26b88d01b)
 [![Contra](https://img.shields.io/badge/Hire%20me%20on-Contra-000000?style=flat)](https://contra.com/mojtaba_py_code)
 [![Freelancer](https://img.shields.io/badge/Hire%20me%20on-Freelancer-29B2FE?style=flat)](https://www.freelancer.com/hireme/mojtaba2025py)
 [![Fiverr](https://img.shields.io/badge/Hire%20me%20on-Fiverr-1DBF73?style=flat&logo=fiverr&logoColor=white)](https://www.fiverr.com/mojtaba2025py)
